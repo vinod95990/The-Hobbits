@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+a {
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  --main-font: "Source Sans Pro", sans-serif;
+  --secondary-font: "Herr Von Muellerhoff", cursive;
+  --body-font: "Cabin", sans-serif;
+  --main-font-color-dark: #252525;
+  --secondary-font-color: #c59d5f;
+  --body-font-color: #515151;
+}
+
+/* Welcome */
+@keyframes fadeup {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+/* Hobbit griddle */
+@keyframes fadedown {
+  0% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Star */ /* Explore */
+
+@keyframes asterisk {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Ready to bake*/
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.7rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------Main-Home------------- */
+
+.hero-b {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(img/hero.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.common {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.hero-b a {
+  font-family: var(--body-font);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.home h2 {
+  font-family: var(--main-font);
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: solid 3px white;
+  position: relative;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+}
+
+.home .main-links a {
+  padding: 0px 10px;
+}
+
+.welcome {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.welcome h1 {
+  font-family: var(--secondary-font);
+  color: var(--secondary-font-color);
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  animation: fadeup 0.6s forwards;
+  animation-delay: 0.65s;
+  opacity: 0;
+}
+
+.welcome h2 {
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.8rem;
+  animation: fadedown 1s forwards;
+}
+
+.welcome-icon-sec {
+  color: yellow;
+  position: relative;
+}
+
+.welcome-icon-sec i {
+  opacity: 0;
+  animation: asterisk 1.1s forwards;
+  animation-delay: 1.1s;
+}
+
+.welcome-icon-sec::before {
+  position: absolute;
+  content: "";
+  width: 110px;
+  height: 3px;
+  background-color: #c59d5f;
+  top: 40%;
+  right: 20%;
+  opacity: 0;
+  animation: line 1.2s forwards;
+  animation-delay: 1.7s;
+}
+
+.welcome-icon-sec::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  background-color: #c59d5f;
+  top: 40%;
+  left: 20%;
+  opacity: 0;
+  animation: line 1.2s forwards;
+  animation-delay: 1.7s;
+}
+
+@keyframes line {
+  0% {
+    opacity: 0;
+    width: 0px;
+    height: 3px;
+  }
+
+  100% {
+    opacity: 1;
+    width: 110px;
+    height: 3px;
+  }
+}
+
+.welcome p {
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--body-font);
+  letter-spacing: 5px;
+  padding: 1px 0px 22px 0px;
+  font-size: 1rem;
+  font-weight: 100;
+  opacity: 0;
+  animation: topdown 0.9s forwards;
+  animation-delay: 2.1s;
+}
+
+.welcome a {
+  color: var(--main-font-color-dark);
+  padding: 5px 20px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: wheat;
+  font-weight: 100;
+  letter-spacing: 1.25px;
+  opacity: 0;
+  animation: asterisk 1.2s forwards;
+  animation-delay: 2.2s;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+.discover-sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 20px;
+  text-align: center;
+  padding: 60px 0px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.discover-sec h2 {
+  font-family: var(--secondary-font);
+  color: var(--secondary-font-color);
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.discover-sec h4 {
+  font-family: var(--body-font);
+  border-bottom: 2px solid #c59d5f;
+  width: fit-content;
+  margin: 0 auto;
+  color: #c59d5f;
+  letter-spacing: 3px;
+}
+
+.discover-sec h3 {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: rgb(39, 38, 38);
+}
+
+.discover-sec p {
+  font-family: var(--main-font);
+  padding: 20px 0px;
+}
+
+.discover-sec img {
+  border-radius: 10px;
+}
+
+.discover-sec i {
+  color: rgb(255, 102, 0);
+}
+
+/* ---------------------------------------------- */
+
+.tasteful {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  background: url(img/tasteful-recipes.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.tasteful h1 {
+  font-family: var(--secondary-font);
+  color: var(--secondary-font-color);
+  font-size: 6rem;
+  font-weight: 100;
+  letter-spacing: 2.5px;
+  opacity: 1;
+  /* animation: taste 1s forwards ease-out; */
+}
+
+.tasteful h2 {
+  font-family: var(--main-font);
+  letter-spacing: 2.6px;
+  font-size: 2.5rem;
+  /* animation: recipe 1s forwards ease-out; */
+}
+
+.tasteful span {
+  color: rgb(214, 214, 0);
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+}
+
+@keyframes taste {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RECIPES */
+@keyframes recipe {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.perfect {
+  background: url(img/perfect-blend.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* --------------------MENU------------------------------------- */
+
+.menu-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: relative;
+}
+
+.newsAbout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15rem;
+  margin: 50px 0px;
+}
+
+.follow h2 {
+  font-family: var(--body-font);
+  padding: 10px 0px;
+  margin-top: 30px;
+  z-index: 10;
+}
+
+.follow p {
+  font-family: var(--body-font);
+  padding: 10px;
+}
+
+.fa-star {
+  color: yellow;
+}
+
+.newsAbout h4 {
+  font-family: var(--body-font);
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+.newsAbout i {
+  padding: 10px;
+}
+
+.far {
+  background: white;
+  color: black;
+  border-radius: 50%;
+}
+
+.uparrow {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+  background: #121212;
+  border-radius: 50%;
+  padding: 2rem;
+  z-index: -1;
+}
+
+/* ------------------------------------------------ */
+@media only screen and (max-width: 1000px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home div:nth-child(2) {
+    display: none;
+  }
+
+  .discover-sec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tasteful h2 {
+    font-family: var(--main-font);
+    font-size: 2rem;
+    /* animation: recipe 1s forwards ease-out; */
+  }
+
+  .newsAbout {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    grid-gap: 20px;
+    border-top: 3px solid red;
+    padding-top: 10px;
+  }
+
+  .discover-sec h4 {
+    font-size: 1rem;
+  }
+}
